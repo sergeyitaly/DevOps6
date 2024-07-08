@@ -1,0 +1,8 @@
+git clone git@github.com:sergeyitaly/DevOps6.git
+ssh-keygen -t rsa -b 4096 -C "sergeyitaly@yahoo.com" -f ~/.ssh/aws
+cat ~/.ssh/aws.pub
+ssh -T git@gitlab.com
+nano ~/.ssh/config
+nano aws.ssh
+
+
