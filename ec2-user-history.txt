@@ -1,0 +1,36 @@
+[ec2-user@ip-172-31-34-53 ~]$ history
+    1  ls -al
+    2  cd /home/ec2-user/
+    3  ls -al
+    4  touch myfile.txt
+    5  cp myfile.txt myfile_copy.txt
+    6  mv myfile_copy.txt myfile_renamed.txt
+    7  sudo chown ec2-user:ec2-user myfile.txt
+    8  mkdir mydirectory
+    9  rm myfile.txt
+   10  rmdir mydirectory
+   11  sudo yum update -y
+   12  sudo yum install -y mc git htop nano curl wget ansible ncdu httpd
+   13  ps aux
+   14  sudo systemctl status httpd
+   15  sudo yum install -y epel-release
+   16  sudo yum install -y stress
+   17  stress --cpu 4 --timeout 60s
+   18  stress --cpu 4 --timeout 10s
+   19  stress --cpu 4 --timeout 60s
+   20  lsblk
+   21  sudo mkfs -t ext4 /dev/xvdf
+   22  sudo mkfs -t ext4 /dev/xvda
+   23  sudo mkfs -t ext4 /dev/xvdf
+   24  sudo mkdir /mnt/ebs
+   25  sudo mount /dev/xvdf /mnt/ebs
+   26  sudo yum update -y
+   27  echo '/dev/xvdf /mnt/ebs ext4 defaults,nofail 0 2' | sudo tee -a /etc/fstab
+   28  sudo yum install -y httpd
+   29  sudo systemctl start httpd
+   30  sudo systemctl enable httpd
+   31  sudo systemctl status httpd
+   32  sudo cat /var/log/httpd/access_log
+   33  sudo cat /var/log/httpd/error_log
+   34  history
+[ec2-user@ip-172-31-34-53 ~]$ 
