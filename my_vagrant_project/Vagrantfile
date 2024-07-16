@@ -1,0 +1,32 @@
+Vagrant.configure("2") do |config|
+  config.vm.define "web1" do |web1|
+    web1.vm.provider "docker" do |d|
+      d.image = "my_ubuntu_bionic:latest"
+      d.name = "web1"
+      d.remains_running = true
+      d.ports = ["2200:22"]
+      d.volumes = ["/Volumes/MACDOC/DevOps6/my_vagrant_project:/vagrant"]
+    end
+  end
+
+  config.vm.define "web2" do |web2|
+    web2.vm.provider "docker" do |d|
+      d.image = "my_ubuntu_bionic:latest"
+      d.name = "web2"
+      d.remains_running = true
+      d.ports = ["2201:22"]
+      d.volumes = ["/Volumes/MACDOC/DevOps6/my_vagrant_project:/vagrant"]
+    end
+  end
+
+  config.vm.define "db" do |db|
+    db.vm.provider "docker" do |d|
+      d.image = "my_ubuntu_bionic:latest"
+      d.name = "db"
+      d.remains_running = true
+      d.ports = ["2202:22"]
+      d.volumes = ["/Volumes/MACDOC/DevOps6/my_vagrant_project:/vagrant"]
+    end
+  end
+end
+
