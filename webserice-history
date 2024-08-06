@@ -1,0 +1,33 @@
+root@ip-172-31-18-191:/etc/nginx/sites-available# history
+    1  dpkg-buildpackage -b --no-sign
+    2  cd ..
+    3  ls -la | grep core
+    4  ls -al
+    5  ls -la | grep core
+    6  dpkg -i nginx-core_1.18.0-6ubuntu14.4_amd64.deb
+    7  ls -al | grep commin
+    8  ls -al | grep common
+    9  dpkg -i nginx-common_1.18.0-6ubuntu14.4_all.deb
+   10  nginx -v
+   11  nginx -V
+   12  service nginx status
+   13  cd /etc/nginx/sites-available/
+   14  nano default
+   15  sudo sh -c "echo -n 'sammy:' >> /etc/nginx/.htpasswd"
+   16  sudo sh -c "echo -n 'serhii:' >> /etc/nginx/.htpasswd"
+   17  sudo sh -c "openssl passwd -apr1 >> /etc/nginx/.htpasswd"
+   18  cat /etc/nginx/.htpasswd
+   19  vi default 
+   20  nano default
+   21  service nginx restart
+   22  systemctl status nginx.service
+   23  sudo nginx -t
+   24  nano default
+   25  service nginx restart
+   26  nano default
+   27  service nginx restart
+   28  nano default
+   29  service nginx restart
+   30  history
+root@ip-172-31-18-191:/etc/nginx/sites-available# 
+
