@@ -1,0 +1,39 @@
+ docker pull postgres:13\ndocker run --name postgres13 -e POSTGRES_PASSWORD=yourpassword -d postgres:13\n
+ docker ps\n
+ 
+docker exec -it postgres13 psql -U postgres\n
+
+
+CREATE DATABASE itca;
+
+CREATE USER student WITH PASSWORD '1234';
+ALTER USER student WITH SUPERUSER;
+
+
+
+CREATE TABLE devops4.users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+
+INSERT INTO devops4.users (name, email) VALUES
+('Alice', 'alice@example.com'),
+('Bob', 'bob@example.com');
+
+CREATE TABLE devops4.projects (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES devops4.users(id),
+    name VARCHAR(100),
+    start_date DATE
+);
+
+INSERT INTO devops4.projects (user_id, name, start_date) VALUES
+(1, 'Project Alpha', '2023-01-01'),
+\c itca
+
+
+(2, 'Project Beta', '2023-02-01');
+
+
